@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Pacifico";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(""), url("../fonts/pacifico-v17-cyrillic-regular.woff2") format("woff2"), url("../fonts/pacifico-v17-cyrillic-regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(""), url("../fonts/comfortaa-v30-cyrillic-regular.woff2") format("woff2"), url("../fonts/comfortaa-v30-cyrillic-regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(""), url("../fonts/comfortaa-v30-cyrillic-700.woff2") format("woff2"), url("../fonts/comfortaa-v30-cyrillic-700.woff") format("woff");
+  }
