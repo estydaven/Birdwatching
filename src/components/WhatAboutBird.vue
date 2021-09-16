@@ -4,40 +4,8 @@
       <TitlePage msg="Что ты узнаешь про сто видов птиц?" />
     </div>
     <div class="what__inner">
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img1.jpg" alt="" />
-        <p class="what__text">
-          как отличать птиц по внешности (наряды самки и самца, брачные и
-          внебрачные наряды, молодые птицы)
-        </p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img2.jpg" alt="" />
-        <p class="what__text">как отличить от похожих видов</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img3.jpg" alt="" />
-        <p class="what__text">в какой сезон их можно встретить</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img4.jpg" alt="" />
-        <p class="what__text">как определить вид птицы по голосу</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img5.jpg" alt="" />
-        <p class="what__text">где можно встретить конкретные виды</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img8.jpg" alt="" />
-        <p class="what__text">особенности питания</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img6.jpg" alt="" />
-        <p class="what__text">повадки</p>
-      </div>
-      <div class="what__block">
-        <img class="what__image" src="../assets/images/content-images/img7.jpg" alt="" />
-        <p class="what__text">лайфхаки для бердвотчинга</p>
+      <div class="what__block" v-for="item in birds" :key="item.id">
+        <WhatYouKnow :item="item" />
       </div>
     </div>
   </div>
@@ -45,12 +13,68 @@
 
 <script>
 import TitlePage from "@/components/TitlePage.vue";
+import WhatYouKnow from "@/components/WhatYouKnow.vue";
+import ImageOne from "../assets/images/content-images/img1.jpg";
+import ImageTwo from "../assets/images/content-images/img2.jpg";
+import ImageThree from "../assets/images/content-images/img3.jpg";
+import ImageFour from "../assets/images/content-images/img4.jpg";
+import ImageFive from "../assets/images/content-images/img5.jpg";
+import ImageSix from "../assets/images/content-images/img6.jpg";
+import ImageSeven from "../assets/images/content-images/img7.jpg";
+import ImageEight from "../assets/images/content-images/img8.jpg";
 
 export default {
   name: "WhatAboutBird",
   components: {
     TitlePage,
-  }
+    WhatYouKnow,
+  },
+  data: function () {
+    return {
+      birds: [
+        {
+          name: "как отличать птиц по внешности (наряды самки и самца, брачные и внебрачные наряды, молодые птицы)",
+          id: 1,
+          image: ImageOne,
+        },
+        {
+          name: "как отличить от похожих видов",
+          id: 2,
+          image: ImageTwo,
+        },
+        {
+          name: "в какой сезон их можно встретить",
+          id: 3,
+          image: ImageThree,
+        },
+        {
+          name: "как определить вид птицы по голосу",
+          id: 4,
+          image: ImageFour,
+        },
+        {
+          name: "где можно встретить конкретные виды",
+          id: 5,
+          image: ImageFive,
+        },
+        { name: "особенности питания", id: 6, image: ImageSix },
+        { name: "повадки", id: 7, image: ImageSeven },
+        {
+          name: "лайфхаки для бердвотчинга",
+          id: 8,
+          image: ImageEight,
+        },
+      ],
+      ImageOne,
+      ImageTwo,
+      ImageThree,
+      ImageFour,
+      ImageFive,
+      ImageSix,
+      ImageSeven,
+      ImageEight,
+    };
+  },
 };
 </script>
 

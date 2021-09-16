@@ -1,18 +1,20 @@
-# birdwatching-school
+# Сайт для школы Бердвотчинга
 
-## Project setup
+## Структура
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+Главная страница
+Страница формы регистрации
+Страница приветствия нового студента Школы
 ```
 
-### Compiles and minifies for production
+### Использованные технологии
 ```
-npm run build
+html5, css3, vue.js 2.0, vue.cli, vuerouter, vuelidate
+```
+
+### Немного о проекте
+```
+Данный сайт делался для людей, которые хотят учиться в Школе бердвотчинга. Рассказана основная информация о курсе, что студенты узнают, кто преподаватель, как будут проходить занятия.
 ```
 
 ### Customize configuration
